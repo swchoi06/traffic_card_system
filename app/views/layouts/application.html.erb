@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TrafficCardSystem</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+</head>
+
+<body>
+
+<div class = "row">
+
+<div class="span3">
+	<%= link_to 'Transit Log', trans_logs_path %>
+	<br/>
+	<%= link_to 'Transfer Log', transfer_logs_path %>
+	<br/>
+	<%= link_to 'Error Log', error_logs_path %>
+</div>
+
+<div class = "span9">
+<%= yield %>
+</div>
+
+</div>
+
+</body>
+</html>

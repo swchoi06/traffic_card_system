@@ -1,0 +1,19 @@
+<h1> Error Log </h1>
+
+<table>
+	<tr>
+		<th>Card ID</th>
+		<th>Error Occured Time</th>
+		<th>Error Message</th>
+	</tr>
+
+<% @error_logs.each do |log| %>
+	<tr>
+		<td><%= log.cardID %></td>
+		<td><%= log.errorOccurTime %></td>
+		<td><%= log.errorMessage %></td>
+	</tr>
+<% end %>
+</table>
+
+<br />

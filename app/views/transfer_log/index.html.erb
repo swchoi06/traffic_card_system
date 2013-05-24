@@ -1,0 +1,28 @@
+<h1> Transfer Log </h1>
+
+<table>
+	<tr>
+		<th>Card ID</th>
+		<th>Transfer Time</th>
+		<th>Transfer From</th>
+		<th>Transfer To </th>
+		<th>Cost</th>
+	</tr>
+
+<% @transfer_logs.each do |log| %>
+	<% @transferFrom = TransLog.find(log.transferFrom) %>
+	<% @transferTo = TransLog.find(log.transferTo) %>
+	<tr>
+		<td><%= log.cardID %></td>
+		<td><%= @transferTo.boardingTime %></td>
+		<td><%= @transferFrom.busRouteNm %></td>
+		<td><%= @transferTo.busRouteNm %></td>
+		<td><%= @transferTo.cost %></td>
+	</tr>
+
+<% end %>
+</table>
+
+<br />
+
+
