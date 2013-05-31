@@ -1,4 +1,5 @@
 class TransferLogController < ApplicationController
+	layout 'producers'
 	def index
 		@transfer_logs = TransferLog.all	
 		respond_to do |format|

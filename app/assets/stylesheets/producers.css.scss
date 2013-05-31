@@ -1,0 +1,25 @@
+.side_menu {
+margin-top: 20px;
+height: 200px;
+background: #ffffff;
+font-size: 19px;
+}
+
+.side_menu > li > a{
+border: 1px solid #e5e5e5;
+}
+
+.side_menu > li > a:link,
+.side_menu > li > a:visited{
+Color: #d3d3d3;
+}
+
+.side_menu > ul > li > a:hover{
+Color: black
+}
+
+.tabs-left > ul{
+width: 150px; 
+margin-top: 20px;
+padding-left: 30px;
+}

@@ -1,4 +1,5 @@
 class ErrorLogController < ApplicationController
+	layout 'producers'
 	def index
 		@error_logs = ErrorLog.all
 

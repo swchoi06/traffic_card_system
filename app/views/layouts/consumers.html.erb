@@ -12,13 +12,7 @@
 
 <%= render :partial => "layouts/header" %>
 
-<div class = "span2", id="vertical">
-	<%= link_to 'Transit Log', trans_logs_path %>
-	<br>
-	<%= link_to 'Transfer Log', transfer_logs_path %>
-	<br>
-	<%= link_to 'Error Log', error_logs_path %>
-</div>
+<%= render :partial => "layouts/menu_for_producers" %>
 
 <div class = "span10">
 	<%= yield %>

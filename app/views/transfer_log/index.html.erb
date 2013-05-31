@@ -1,14 +1,17 @@
-<h1> Transfer Log </h1>
-
-<table>
-	<tr>
+<link rel="style" type="text/css" href="style.css"/>
+<h1 class="Title"> Transfer Log </h1>
+		
+<table class="table table-striped">
+<div id=transfersubject">
+<tr>
 		<th>Card ID</th>
 		<th>Transfer Time</th>
 		<th>Transfer From</th>
 		<th>Transfer To </th>
 		<th>Cost</th>
 	</tr>
-
+</div>
+<div id=transfercontents>
 <% @transfer_logs.each do |log| %>
 	<% @transferFrom = TransLog.find(log.transferFrom) %>
 	<% @transferTo = TransLog.find(log.transferTo) %>
@@ -19,7 +22,7 @@
 		<td><%= @transferTo.busRouteNm %></td>
 		<td><%= @transferTo.cost %></td>
 	</tr>
-
+</div>
 <% end %>
 </table>
 

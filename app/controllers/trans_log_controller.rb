@@ -1,4 +1,6 @@
 class TransLogController < ApplicationController
+
+	layout 'producers'
 	def index
 		@trans_logs = TransLog.all
 
