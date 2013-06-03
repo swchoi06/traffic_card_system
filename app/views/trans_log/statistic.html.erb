@@ -1,1 +1,32 @@
-<h1> statistic </h1>
+<div class = "title">
+	<h1> statistic </h1>
+	<%= link_to 'Back to Log', trans_logs_path %>
+</div>
+
+<h4> 버스 노선당 사용금액 </h4>
+<table class="table table-striped">
+	<tr>
+		<th>버스노선번호</th>
+		<th>총 사용액</th>
+		<th>실 사용액</th>
+		<th>버스노선번호</th>
+		<th>총 사용액</th>
+		<th>실 사용액</th>
+		<th>버스노선번호</th>
+		<th>총 사용액</th>
+		<th>실 사용액</th>
+	</tr>
+	
+	<tr>
+		<td><%= @total_cost[0][0] %></td>
+		<td><%= @total_cost[0][1] %></td>
+		<td><%= @total_cost[0][2] %></td>
+		<td><%= @total_cost[1][0] %></td>
+		<td><%= @total_cost[1][1] %></td>
+		<td><%= @total_cost[1][2] %></td>
+	</tr>
+</table>
+
+<h4> 총 버스이용금액 <h4>
+<%= @_total_cost %>
+<%= @_total_discounted_cost %>

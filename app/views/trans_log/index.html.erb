@@ -1,5 +1,7 @@
-<h1 class="Title">Transit Logs</h1>
-
+<div class = "title">
+	<h1 class="Title">Transit Logs</h1>
+	<%= link_to 'Statistic', trans_logs_statistic_path %>  
+</div>
 <table class="table table-striped">
 	<tr>
 		<th>Card ID</th>
@@ -9,7 +11,7 @@
 		<th>Landing Time</th>
 		<th>Landing Place</th>
 		<th>Cost</th>
-		<th>Transfer</th>
+		<th>Discounted Cost</th>
 	</tr>
 
 <% @trans_logs.each do |log| %>
@@ -21,7 +23,7 @@
 		<td><%= log.landingTime %></td>
 		<td><%= log.landingPlace %></td>
 		<td><%= log.cost %></td>
-		<td><%= log.transfer %></td>
+		<td><%= log.discountedCost %></td>
 	</tr>
 <% end %>
 </table>

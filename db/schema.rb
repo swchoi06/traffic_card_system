@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130520054700) do
+ActiveRecord::Schema.define(:version => 20130602070033) do
 
   create_table "error_logs", :force => true do |t|
     t.integer  "cardID"
@@ -30,8 +30,9 @@ ActiveRecord::Schema.define(:version => 20130520054700) do
     t.datetime "landingTime"
     t.integer  "transfer"
     t.integer  "cost"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "discountedCost"
   end
 
   create_table "transfer_logs", :force => true do |t|

@@ -1,6 +1,9 @@
 <link rel="style" type="text/css" href="style.css"/>
-<h1 class="Title"> Transfer Log </h1>
-		
+
+<div class="title">
+	<h1 class="Title"> Transfer Log </h1>
+	<%= link_to 'Statistic', transfer_logs_statistic_path %>
+</div>
 <table class="table table-striped">
 <div id=transfersubject">
 <tr>
@@ -8,7 +11,7 @@
 		<th>Transfer Time</th>
 		<th>Transfer From</th>
 		<th>Transfer To </th>
-		<th>Cost</th>
+		<th>Discounted Cost</th>
 	</tr>
 </div>
 <div id=transfercontents>
@@ -20,7 +23,7 @@
 		<td><%= @transferTo.boardingTime %></td>
 		<td><%= @transferFrom.busRouteNm %></td>
 		<td><%= @transferTo.busRouteNm %></td>
-		<td><%= @transferTo.cost %></td>
+		<td><%= @transferTo.discountedCost %></td>
 	</tr>
 </div>
 <% end %>

@@ -2,7 +2,10 @@ TrafficCardSystem::Application.routes.draw do
 	match 'trans_logs/' => 'TransLog#index'
 	match 'transfer_logs/' => 'TransferLog#index'
 	match 'error_logs/' => 'ErrorLog#index'
-#	resources :TransLog
+	match 'trans_logs/statistic' => 'TransLog#statistic'
+	match 'transfer_logs/statistic' => 'TransferLog#statistic'
+	match 'error_logs/statistic' => 'ErrorLog#statistic'
+#resources :TransLog
 # The priority is based upon order of creation:
   # first created -> highest priority.
 
